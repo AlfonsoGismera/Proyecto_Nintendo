@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>UT 2 – Práctica 3 – LMSGI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body class="fondo">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-danger">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../img/logo.jpg" alt="Logo" width="200"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.nintendo.es/Empresa/Empleo/Sobre-Nintendo/Sobre-Nintendo-825979.html" target="_blank">Sobre nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/Amiibos.html">Amiibos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <fieldset class="border p-4">
+            <legend id="datos" class="w-auto p-2">Datos del usuario</legend>
+            <form>
+                <div class="form-group">
+                    <label for="DNI">DNI:</label>
+                    <input type="text" id="DNI" class="form-control" maxlength="9" name="DNI" pattern="[0-9]{8}[A-Z]{1}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ape">Apellido:</label>
+                    <input type="text" id="ape" class="form-control" maxlength="30" name="ape" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" class="form-control" maxlength="15" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="start">Fecha de Nacimiento:</label>
+                    <input type="date" id="start" class="form-control" name="birthdate" value="1990-01-01" min="1950-01-01" max="2020-10-01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="list">Nacionalidad:</label>
+                    <select name="nationality" id="list" class="form-control">
+                        <option value="España">España</option>
+                        <option value="Mordor">Mordor</option>
+                        <option value="Narnia">Narnia</option>
+                        <option value="De mas alla del muro">De más allá del muro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pwd">Contraseña:</label>
+                    <input type="password" id="pwd" class="form-control" name="password" maxlength="10" pattern=".{8,}" title="Ocho o más caracteres" required>
+                </div>
+
+                <fieldset class="form-group">
+                    <legend>Género</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genero" id="hombre" value="Hombre" required>
+                        <label class="form-check-label" for="hombre">Hombre</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genero" id="mujer" value="Mujer">
+                        <label class="form-check-label" for="mujer">Mujer</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genero" id="no_contestar" value="Prefiero no contestar">
+                        <label class="form-check-label" for="no_contestar">Prefiero no contestar</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="terms" id="terms" required>
+                    <label class="form-check-label" for="terms">Acepto los términos y condiciones</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="info" id="info" checked>
+                    <label class="form-check-label" for="info">Desea recibir más información</label>
+                </div>
+
+                <div class="mt-4">
+                    <input class="btn btn-primary" type="submit" value="Registrar">
+                    <input class="btn btn-secondary" type="reset" value="Borrar">
+                </div>
+            </form>
+        </fieldset>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer" class="p-5">
+        <div class="container w-50 pt-5">
+            <div class="row justify-content-md-center">
+                <div class="col text-center">
+                    <a href="https://www.nintendo.es/Atencion-al-cliente/Contactar/Servicio-de-Atencion-al-Consumidor/Ponte-en-contacto-con-nosotros-1106389.html" target="_blank">
+                        <button class="btn btn-lg rounded-pill btn-warning w-10 p-3 shadow-sm font-weight-bold">Atención al cliente</button>
+                    </a>
+                </div>
+            </div>
+            <div class="row justify-content-md-center py-5">
+                <div class="col text-center font-weight-light">
+                    <p>&COPY; Copyright Alfonso Fco Gismera Perea</p>
+                    <p>Esta web se hizo para un trabajo de clase</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+</body>
+</html>
